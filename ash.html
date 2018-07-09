@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Event Registration Form</title>
+    <link rel='stylesheet' href='ashcss.css' type='text/css' />
+    <script src="ashjs.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEiDa0z-_cbVOYZnbMlOdm6q8qHlU0gy8&callback=myMap"></script>
+
+  </head>
+  <body onload="document.registration.userid.focus();">
+    <h2>Basic Event Data</h2>
+    <form name='registration' onSubmit="return formValidation();">
+<ul>
+  <li><label for="ename">Event Name  </label></li>
+  <li><input type="text" name="ename" size="12" /></li>
+  <li><label for="coord1">Coordinator 1  </label></li>
+  <li><input type="text" name="coord1" size="12" /></li>
+  <li><label for="coord2">Coordinator 2  </label></li>
+  <li><input type="text" name="coord2" size="12" /></li>
+  <li><label for="cvrfoto">Cover Photo (191px x 141px) </label></li>
+  <li><input type="file" name="cvrfoto" /></li>
+  <li><label for="desc">Event Description </label></li>
+<li><textarea name="desc" id="desc"></textarea></li>
+  <li><label for="stdate">Start Date/Time   </label></li>
+  <li><input type="date" id = "ipstdate" name="stdate">
+    <input type="time" name="sttime">
+</li>
+  <li><label for="endate">End Date/Time   </label></li>
+  <li><input type="date" id = "ipendate" name="endate">
+    <input type="time" name="entime">
+</li>
+  <li><label for="ven">Venue </label></li>
+<li><textarea name="ven" id="ven"></textarea></li>
+  <li><label for="sven">Short Venue  </label></li>
+  <li><input type="text" name="sven" size="12" /></li>
+  <li><label for="cause">Cause </label></li>
+  <li><select name="cause">
+    <option selected="" value="Default">(Please select a Cause)</option>
+    <option value="A1">Adovcacy and Human Rights</option>
+    <option value="A2">Women Empowerment</option>
+    <option value="A3">Child Labour</option>
+    </select>
+  </li>
+  <li><label for="cause">Event Type </label></li>
+  <li><select name="etype">
+    <option selected="" value="Default">(Please select a Type)</option>
+    <option value="B1">Film Screening</option>
+    <option value="B2">Symposium</option>
+    <option value="B3">Round Table</option>
+    </select>
+  </li>
+  <li><label for="zone">Zone </label></li>
+  <li><select name="zone">
+    <option selected="" value="Default">(Please select a Zone)</option>
+    <option value="C1">Adyar</option>
+    <option value="C2">Seidhapett</option>
+    <option value="C3">Nungambakkam</option>
+    </select>
+  </li>
+  <li><label for="googleMap">Map Location </label></li>
+  <li>
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+    </li>
+	
+
+  <li><input type="submit" id = "subm" name="submit" value="Submit" /></li>
+      
+      </ul>
+
+    </form>
+      
+	  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEiDa0z-_cbVOYZnbMlOdm6q8qHlU0gy8&callback=myMap"></script>
+  </body>
+  
+</html>
